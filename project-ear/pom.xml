@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>project</artifactId>
+    <groupId>com.gwt.sample</groupId>
+    <version>1.0</version>
+  </parent>
+
+  <groupId>com.gwt.sample</groupId>
+  <artifactId>project-ear</artifactId>
+  <version>1.0</version>
+  <packaging>ear</packaging>
+
+  <name>project-ear EAR</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>2.4.2</version>
+        <configuration>
+            <version>5</version>
+            <defaultLibBundleDir>lib</defaultLibBundleDir>
+        </configuration>
+      </plugin>
+    </plugins>
+    <finalName>project-ear</finalName>
+  </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.gwt.sample</groupId>
+            <artifactId>project-ejb</artifactId>
+            <version>1.0</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.gwt.sample</groupId>
+            <artifactId>project-web</artifactId>
+            <version>1.0</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+</project>
