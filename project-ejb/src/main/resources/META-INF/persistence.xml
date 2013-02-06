@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="project">
+		<jta-data-source>java:/OracleDSProject</jta-data-source>
+		<class>au.com.project.sample.domain.Address</class>
+		<class>au.com.project.sample.domain.Applicant</class>
+		<class>au.com.project.sample.domain.ApplicationUser</class>
+		<class>au.com.project.sample.domain.Category</class>
+		<class>au.com.project.sample.domain.AuthenticationRole</class>
+		<class>au.com.project.sample.domain.Certification</class>
+		<class>au.com.project.sample.domain.City</class>
+		<class>au.com.project.sample.domain.Country</class>
+		<class>au.com.project.sample.domain.CoverLetter</class>
+		<class>au.com.project.sample.domain.Currency</class>
+		<class>au.com.project.sample.domain.Designation</class>
+		<class>au.com.project.sample.domain.Document</class>
+		<class>au.com.project.sample.domain.EducationSummary</class>
+		<class>au.com.project.sample.domain.Employee</class>
+		<class>au.com.project.sample.domain.EmploymentRole</class>
+		<class>au.com.project.sample.domain.EmploymentSummary</class>
+		<class>au.com.project.sample.domain.ITSkill</class>
+		<class>au.com.project.sample.domain.Location</class>
+		<class>au.com.project.sample.domain.MaritalStatus</class>
+		<class>au.com.project.sample.domain.PermanentAddress</class>
+		<class>au.com.project.sample.domain.Person</class>
+		<class>au.com.project.sample.domain.PhoneNumber</class>
+		<class>au.com.project.sample.domain.Photo</class>
+		<class>au.com.project.sample.domain.PreferredLocation</class>
+		<class>au.com.project.sample.domain.Project</class>
+		<class>au.com.project.sample.domain.Salary</class>
+		<class>au.com.project.sample.domain.State</class>
+		<class>au.com.project.sample.domain.SubCategory</class>
+		<class>au.com.project.sample.domain.TemporaryAddress</class>
+		<class>au.com.project.sample.domain.TotalExperience</class>
+		<class>au.com.project.sample.domain.phonenumber.ContactNumber</class>
+		<class>au.com.project.sample.domain.phonenumber.Fax</class>
+		<class>au.com.project.sample.domain.phonenumber.Home</class>
+		<class>au.com.project.sample.domain.phonenumber.Mobile</class>
+		<class>au.com.project.sample.domain.phonenumber.Work</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+		</properties>
+	</persistence-unit>
+	<!-- <persistence-unit name="titan"> <jta-data-source>java:/MySqlDSProject</jta-data-source> 
+		<class>com.mycompany.domain.Country</class> <class>com.mycompany.domain.State</class> 
+		<class>com.mycompany.domain.City</class> <properties> <property name="hibernate.dialect" 
+		value="org.hibernate.dialect.MySQL5Dialect"/> <property name="hibernate.hbm2ddl.auto" 
+		value="create-drop"/> </properties> </persistence-unit> -->
+</persistence>

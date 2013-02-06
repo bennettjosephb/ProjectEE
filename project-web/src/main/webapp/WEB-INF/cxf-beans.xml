@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/GetCity/v1"
+		id="getCityService" address="/GetCityService" endpointName="tns:GetCitySOAP"
+		implementor="au.com.project.sample.registration.services.getcity.GetCityImpl"
+		serviceName="tns:GetCity"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/GetCity/1.0/GetCity.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/GetCountry/v1"
+		id="getCountryService" address="/GetCountryService" endpointName="tns:GetCountrySOAP"
+		implementor="au.com.project.sample.registration.services.getcountry.GetCountryImplementation"
+		serviceName="tns:GetCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/GetCountry/1.0/GetCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/GetState/v1"
+		id="getStateService" address="/GetStateService" endpointName="tns:GetStateSOAP"
+		implementor="au.com.project.sample.registration.services.getstate.GetStateImplementation"
+		serviceName="tns:GetState"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/GetState/1.0/GetState.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/UpdateCity/v1"
+		id="updateCityService" address="/UpdateCityService" endpointName="tns:UpdateCitySOAP"
+		implementor="au.com.project.sample.registration.services.updatecity.UpdateCityImpl"
+		serviceName="tns:UpdateCity"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/UpdateCity/1.0/UpdateCity.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/UpdateCountry/v1"
+		id="updateCountryService" address="/UpdateCountryService"
+		endpointName="tns:UpdateCountrySOAP"
+		implementor="au.com.project.sample.registration.services.updatecountry.UpdateCountryImpl"
+		serviceName="tns:UpdateCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/UpdateCountry/1.0/UpdateCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/UpdateState/v1"
+		id="updateStateService" address="/UpdateStateService" endpointName="tns:UpdateStateSOAP"
+		implementor="au.com.project.sample.registration.services.updatestate.UpdateStateImpl"
+		serviceName="tns:UpdateState"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/UpdateState/1.0/UpdateState.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/SaveCity/v1"
+		id="saveCityService" address="/SaveCityService" endpointName="tns:SaveCitySOAP"
+		implementor="au.com.project.sample.registration.services.savecity.SaveCityImpl"
+		serviceName="tns:SaveCity"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/SaveCity/1.0/SaveCity.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/SaveCountry/v1"
+		id="saveCountryService" address="/SaveCountryService" endpointName="tns:SaveCountrySOAP"
+		implementor="au.com.project.sample.registration.services.savecountry.SaveCountryImpl"
+		serviceName="tns:SaveCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/SaveCountry/1.0/SaveCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/SaveState/v1"
+		id="saveStateService" address="/SaveStateService" endpointName="tns:SaveStateSOAP"
+		implementor="au.com.project.sample.registration.services.savestate.SaveStateImpl"
+		serviceName="tns:SaveState"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/SaveState/1.0/SaveState.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/SetCity/v1"
+		id="setCityService" address="/SetCityService" endpointName="tns:SetCitySOAP"
+		implementor="au.com.project.sample.registration.services.setcity.SetCityImpl"
+		serviceName="tns:SetCity"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/SetCity/1.0/SetCity.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/SetCountry/v1"
+		id="setCountryService" address="/SetCountryService" endpointName="tns:SetCountrySOAP"
+		implementor="au.com.project.sample.registration.services.setcountry.SetCountryImpl"
+		serviceName="tns:SetCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/SetCountry/1.0/SetCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/SetState/v1"
+		id="setStateService" address="/SetStateService" endpointName="tns:SetStateSOAP"
+		implementor="au.com.project.sample.registration.services.setstate.SetStateImpl"
+		serviceName="tns:SetState"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/SetState/1.0/SetState.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/DeleteCity/v1"
+		id="deleteCityService" address="/DeleteCityService" endpointName="tns:DeleteCitySOAP"
+		implementor="au.com.project.sample.registration.services.deletecity.DeleteCityImpl"
+		serviceName="tns:DeleteCity"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/DeleteCity/1.0/DeleteCity.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/DeleteCountry/v1"
+		id="deleteCountryService" address="/DeleteCountryService"
+		endpointName="tns:DeleteCountrySOAP"
+		implementor="au.com.project.sample.registration.services.deletecountry.DeleteCountryImpl"
+		serviceName="tns:DeleteCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/DeleteCountry/1.0/DeleteCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/DeleteState/v1"
+		id="deleteStateService" address="/DeleteStateService" endpointName="tns:DeleteStateSOAP"
+		implementor="au.com.project.sample.registration.services.deletestate.DeleteStateImpl"
+		serviceName="tns:DeleteState"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/DeleteState/1.0/DeleteState.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+</beans>
