@@ -8,6 +8,10 @@ import au.com.project.sample.domain.Document;
 import java.util.List;
 import javax.ejb.Local;
 
+/*
+
+
+*/
 /**
  *
  * @author SONY
@@ -28,5 +32,5 @@ public interface DocumentDAOLocal {
     List<Document> findRangeDocument(int[] range);
 
     int countDocument();
-    
+
 }

@@ -8,6 +8,10 @@ import au.com.project.sample.domain.EducationSummary;
 import java.util.List;
 import javax.ejb.Local;
 
+/*
+
+
+*/
 /**
  *
  * @author SONY
@@ -28,5 +32,5 @@ public interface EducationSummaryDAOLocal {
     List<EducationSummary> findRangeEducationSummary(int[] range);
 
     int countEducationSummary();
-    
+
 }

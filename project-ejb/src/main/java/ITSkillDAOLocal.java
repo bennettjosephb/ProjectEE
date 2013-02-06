@@ -8,6 +8,10 @@ import au.com.project.sample.domain.ITSkill;
 import java.util.List;
 import javax.ejb.Local;
 
+/*
+
+
+*/
 /**
  *
  * @author SONY
@@ -28,5 +32,5 @@ public interface ITSkillDAOLocal {
     List<ITSkill> findRangeITSkill(int[] range);
 
     int countITSkill();
-    
+
 }
